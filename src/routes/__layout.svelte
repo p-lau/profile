@@ -4,7 +4,6 @@
     import Navbar from "$lib/Navbar.svelte";
 </script>
 
-<Navbar>
+<Navbar/>
 <slot></slot>
-<Footer></Footer></Navbar>
-<slot></slot>
+<Footer/>
