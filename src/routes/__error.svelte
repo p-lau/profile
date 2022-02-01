@@ -14,7 +14,7 @@
 	export let status: number;
 </script>
 
-<main class="text-center">
+<main>
 	<h1>{status}</h1>
 	{#if status === 404}
 		<p>Sorry! Cannot find the page you are looking for.</p>
