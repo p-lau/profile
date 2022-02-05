@@ -24,3 +24,9 @@
 		<a href={item.href}>{item.title}</a>
 	{/each}
 </nav>
+
+<style>
+	nav {
+		margin: 1rem;
+	}
+</style>

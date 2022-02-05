@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-particles": "^1.22.2"
+		"normalize.css": "^8.0.1",
+		"svelte-particles": "^1.22.3"
 	}
 }

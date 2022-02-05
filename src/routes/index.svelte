@@ -6,7 +6,7 @@
 <Main>
 	<h1>Welcome to SvelteKit</h1>
 	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-	<p class="leading-10">
+	<p>
 		Brenda never wanted to be famous. While most of her friends dreamed about being famous, she
 		could see the negative aspects that those who wanted to be famous seemed to ignore. The fact
 		that you could never do anything in public without being mobbed and the complete lack of privacy

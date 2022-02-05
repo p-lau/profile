@@ -1,11 +1,11 @@
 <script>
-	import '../app.css';
+	import 'normalize.css/normalize.css';
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
 </script>
 
 <Header />
-<main>
-	<slot />
-</main>
+	<main>
+		<slot />
+	</main>
 <Footer />

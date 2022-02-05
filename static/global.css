@@ -3,7 +3,50 @@
     src: local('Inter'), url(Inter-Regular.woff2) format('woff2');
 }
 
+::-webkit-scrollbar {
+    display: block;
+}
+
+::-webkit-scrollbar-thumb {
+    display: block;
+    opacity: 0;
+    background-color: var(--accent-color);
+    border-radius: 100px;
+    border: 4px solid var(--background);
+}
+
+:root {
+    --red: #a20301;
+    --orange: #ea3a21;
+    --yellow: #ebcd0b;
+    --green: rgb(19, 187, 19);
+    --blue: #0e387a;
+    --blue-fade: #0e387a77;
+    --gray: #9fafca;
+    --black: #181514;
+    --white: #d9d8e4;
+    --main-color: var(--white);
+    --accent-color: var(--gray);
+    --background: var(--main-color);
+    --transparent: #0000;
+    --scrollbar-background: var(--background);
+}
+
 html {
+    transition-property: background-color;
 	font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
 	Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--background);
+    color: var(--black)
+}
+
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'IBM Plex Sans';
+}
+
+p {
+    line-height: 2rem;
 }
