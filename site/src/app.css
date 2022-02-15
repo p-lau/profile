@@ -38,11 +38,16 @@
 }
 
 html {
+    min-height: 100vh;
     transition-property: background-color;
 	font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
 	Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: var(--background);
-    color: var(--black)
+    color: var(--black);
+
+}
+
+.canvas {
+    background-image: linear-gradient(to top, #369a, transparent), url(dunes.svg);
 }
 
 h1,h2,h3,h4,h5,h6 {

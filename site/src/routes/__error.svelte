@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import type { ErrorLoad } from '@sveltejs/kit';
+	import type { ErrorLoad } from '@sveltejs/kit'
 	export const load: ErrorLoad = ({ status, error }) => {
 		return {
 			props: {
