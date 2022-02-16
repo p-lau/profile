@@ -46,8 +46,19 @@ html {
 
 }
 
+.canvas::before {
+    z-index: -999;
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:  url(dunes.svg);
+    filter: hue-rotate(180deg);
+}
+
 .canvas {
-    background-image: linear-gradient(to top, #369a, transparent), url(../static/dunes.svg);
+    position: relative;
 }
 
 h1,h2,h3,h4,h5,h6 {
