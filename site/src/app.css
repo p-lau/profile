@@ -46,7 +46,7 @@ html {
 
 }
 
-.canvas::before {
+.dunes::before {
     z-index: -999;
     content: "";
     position: absolute;
@@ -54,7 +54,6 @@ html {
     width: 100%;
     height: 100%;
     background-image:  url(dunes.svg);
-    filter: hue-rotate(180deg);
 }
 
 .canvas {
