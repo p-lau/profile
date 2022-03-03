@@ -1,11 +1,11 @@
 {
   "root": true,
   "project": {
-    "name": "Dev Blog"
+    "name": "Blog"
   },
   "api": {
     "projectId": "92s64fma",
-    "dataset": "development"
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
