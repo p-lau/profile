@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { build, files, timestamp } from '$service-worker';
 
 const ASSETS = `cache${timestamp}`;

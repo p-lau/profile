@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-vercel';
 import preprocess from 'svelte-preprocess';
+import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,6 +10,18 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		vite: {
+			resolve: {
+				alias: {
+					$utils: path.resolve('./src/utils'),
+					$components: path.resolve('./src/components'),
+					$css: path.resolve('./src/css'),
+				}
+			}
+		}
+	},
+	experimental: {
+		useViteProcess: true
 	}
 };
 

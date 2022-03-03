@@ -1,8 +1,6 @@
 <script>
-import Canvas from '$lib/Canvas.svelte';
-
+	import Canvas from '$components/Canvas.svelte';
 	import 'normalize.css/normalize.css';
-	import '../app.css'
 </script>
 
 <Canvas/>
