@@ -23,11 +23,14 @@
 		"allowJs": true,
 		"checkJs": true,
 		"paths": {
+			"$lib":["src/lib"],
 			"$lib/*": ["src/lib/*"],
 			"$utils/*": ["src/utils/*"],
-			"$components/*": ["src/components/*"]
+			"$components/*": ["src/components/*"],
+			"$css/*": ["src/css*"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
-	"exclude": ["src/service-worker.js"]
+	"exclude": ["src/service-worker.js", "./.svelte-kit/*"],
+	"extends": "./.svelte-kit/tsconfig.json"
 }

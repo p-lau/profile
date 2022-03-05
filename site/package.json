@@ -30,6 +30,6 @@
 	"type": "module",
 	"dependencies": {
 		"normalize.css": "^8.0.1",
-		"svelte-particles": "^1.41.5"
+		"svelte-particles": "^1.41.6"
 	}
 }
