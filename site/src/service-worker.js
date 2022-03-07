@@ -1,4 +1,4 @@
-import { build, files, timestamp } from '$service-worker';
+import { build, files, timestamp, prerendered } from '$service-worker';
 
 const ASSETS = `cache${timestamp}`;
 

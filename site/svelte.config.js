@@ -10,15 +10,6 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		vite: {
-			resolve: {
-				alias: {
-					$utils: path.resolve('./src/utils'),
-					$components: path.resolve('./src/components'),
-					$css: path.resolve('./src/css'),
-				}
-			}
-		}
 	},
 	experimental: {
 		useViteProcess: true
