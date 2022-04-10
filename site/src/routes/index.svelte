@@ -1,10 +1,12 @@
-<script lang="ts" context="module">
-	export const prerender = true;
-</script>
+<div>
+	<h1>Panhavuth Lau</h1>
+</div>
 
-<script>
-	import { Footer } from "$lib/components";
-</script>
-
-<h1>Welcome to SvelteKit</h1>
-<Footer/>
+<style>
+	div {
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+</style>

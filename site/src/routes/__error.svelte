@@ -4,7 +4,7 @@
 		return {
 			props: {
 				status,
-				message: error.message
+				message: error.message,
 			}
 		};
 	};
