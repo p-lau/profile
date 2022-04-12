@@ -13,49 +13,83 @@
     --gray: #9fafca;
     --black: #181514;
     --white: #d9d8e4;
-    --text-color: #181514;
+    --text-color: var(--black);
+    --background-color: var(--white);
     --main-color: var(--white);
     --accent-color: var(--gray);
-    --background: var(--main-color);
     --transparent: #0000;
-    --scrollbar-background: var(--background);
-}
-
-html {
-    min-height: 100vh;
-    text-overflow: ellipsis;
-    transition-property: background-color;
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-	Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    color: var(--text-color);
-}
-
-body {
-    height: 100%;
-    background-color: var(--background);
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'IBM Plex Sans';
-}
-h1 {
-    font-size: 4rem;
-}
-
-p {
-    line-height: 2rem;
+    --scrollbar-background: var(--background-color);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --text-color: var(--white);
-        --background: var(--black);
+        --background-color: var(--black);
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
         --text-color: var(--black);
-        --background: var(--white);
+        --background-color: var(--white);
     }
+}
+
+html[theme='light'] {
+    --text-color: var(--black);
+    --background-color: var(--white);
+}
+
+html[theme='dark'] {
+    --text-color: var(--white);
+    --background-color: var(--black);
+}
+
+html {
+    transition-property: background-color;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body {
+    height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'IBM Plex Sans';
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 2rem;
 }
