@@ -6,9 +6,9 @@
 	<filter id='noiseFilter'>
 		<feTurbulence baseFrequency='0.002' seed="1337" result='noise'>
 		</feTurbulence>
-		<feDiffuseLighting in='noise' surfaceScale='20' result='dunes' lighting-color='#a12'>
-			<!-- <animate attributeName="lighting-color" values='#155;#fa9;#e51;#155' dur="10s" repeatCount="indefinite"/> -->
-			<feDistantLight elevation='70'>
+		<feDiffuseLighting in='noise' surfaceScale='100' result='dunes' lighting-color='#234'>
+			<animate attributeName="lighting-color" values='#234;#888;#fa9;#e96;#a55;#234' dur="10s" repeatCount="indefinite"/>
+			<feDistantLight elevation='100'>
 					<animate attributeName="azimuth" values='0;360' dur="10s" repeatCount="indefinite"/>
 			</feDistantLight>
 		</feDiffuseLighting>
@@ -19,13 +19,15 @@
 			repeatCount="indefinite"/>
 		</feTurbulence>
 		<feDisplacementMap in="dunes" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="R" result="displace"/>
-		<feGaussianBlur in="displace" stdDeviation="2" result="final"/>
+		<feDisplacementMap in="dunes" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="R" result="displace"/>
+		<feGaussianBlur in="displace" stdDeviation="1.5" result="final"/>
 	</filter>
 	<rect width='100%' height='100%' filter='url(#noiseFilter)'/>
 </svg>
 
 <style>
     #dunes {
+        opacity: 0.6;
 		position: fixed;
 		height: 100%;
 		width: 100%;
