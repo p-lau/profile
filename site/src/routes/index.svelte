@@ -2,23 +2,6 @@
 	import Canvas from '$lib/components/Canvas.svelte';
 	import { fade } from 'svelte/transition';
 
-	const i = [
-		'Software',
-		'Backend',
-		'Frontend',
-		'Mobile',
-		'Fullstack',
-		'Web',
-		'Go',
-		'Game',
-		'React',
-		'Svelte'
-	];
-	let dev = 0;
-
-	$: setTimeout(() => {
-		dev = (dev + 1) % i.length;
-	}, 516);
 </script>
 
 <svelte:head>
@@ -29,7 +12,6 @@
 <main transition:fade={{ duration: 200 }}>
 	<div>
 		<small>
-			{i[dev]}
 			Developer
 		</small>
 	</div>
@@ -58,7 +40,7 @@
 
 <style>
 	main {
-		font-family: 'IBM Plex Sans', sans-serif;
+		font-family: 'Inter', sans-serif;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
@@ -68,7 +50,7 @@
 	}
 
 	a:hover {
-		color: #3ff;
+		text-shadow: 0 0 0.5rem currentColor;
 	}
 
 	div {
@@ -83,7 +65,7 @@
 	}
 
 	a {
-		transition: all 200ms ease-in-out;
+		transition: all 100ms ease-in-out;
 		color: var(--text-color);
 		text-decoration: none;
 	}
