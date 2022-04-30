@@ -5,7 +5,7 @@ const themes = ['system', 'light', 'dark'];
 
 const { subscribe, update, set } = writable('system', (set) => {
     if (browser) {
-        set(localStorage.getItem('theme'))
+        set(localStorage.getItem('theme') || 'system')
     }
 });
 
