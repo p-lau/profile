@@ -1,11 +1,10 @@
 <script lang="ts">
+	import { navigating } from "$app/stores";
+	import { fade } from 'svelte/transition';
+	import Theme from './Theme.svelte';
 	const items = [
 		{
-			title: 'Home',
-			href: '/'
-		},
-		{
-			title: 'About Me',
+			title: 'About',
 			href: 'about'
 		},
 		{
@@ -13,20 +12,54 @@
 			href: 'projects'
 		},
 		{
-			title: 'Contact',
-			href: 'contact'
+			title: 'Blog',
+			href: 'blog'
 		}
 	];
 </script>
 
-<nav>
-	{#each items as item}
-		<a href={item.href}>{item.title}</a>
-	{/each}
+<h1><a href="/">Panhavuth Lau</a></h1>
+<nav transition:fade={{ duration: 200 }}>
+	<ul>
+		{#each items as { href, title }}
+			<li>
+				<a href={href} title={title}>
+					{title}
+				</a>
+			</li>
+		{/each}
+		<Theme />
+	</ul>
 </nav>
 
 <style>
 	nav {
-		margin: 1rem;
+		position: sticky;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0 1rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	li {
+		list-style: none;
+		display: flex;
+	}
+
+	nav a {
+		padding: 0.25em 0.5rem;
+		font-size: 1.4em;
+		font-weight: 400;
+	}
+
+	ul a:hover {
+		color: dodgerblue;
 	}
 </style>

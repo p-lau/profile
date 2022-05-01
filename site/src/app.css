@@ -6,8 +6,8 @@
     --blue: #0e387a;
     --blue-fade: #0e387a77;
     --gray: #9fafca;
-    --black: #181514;
-    --white: #d9d8e4;
+    --black: #06021a;
+    --white: #f5eeee;
     --text-color: var(--black);
     --background-color: var(--white);
     --main-color: var(--white);
@@ -41,7 +41,7 @@ html[theme='dark'] {
 }
 
 html {
-    transition-property: background-color;
+    transition: background-color 200ms linear;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: var(--background-color);
@@ -49,9 +49,22 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 
+a {
+    color: var(--text-color);
+    transition: all 100ms ease-in-out !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: dodgerblue;
+}
+
+p,
+small,
 h1,
 h2,
 h3,
@@ -59,6 +72,7 @@ h4,
 h5,
 h6 {
     font-family: 'IBM Plex Sans';
+    transition: color 200ms linear;
 }
 
 h1 {

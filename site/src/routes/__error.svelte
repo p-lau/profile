@@ -1,22 +1,21 @@
 <script lang="ts" context="module">
-	import type { ErrorLoad } from '@sveltejs/kit'
-	export const load: ErrorLoad = ({ status, error }) => {
+	import type { HandleError } from '@sveltejs/kit'
+	export const load: HandleError = ({ error: { name, message } }) => {
 		return {
 			props: {
-				status,
-				message: error.message,
+				name,
+				message
 			}
 		};
 	};
 </script>
 
 <script lang="ts">
-	export let status: number;
+	export let name: string;
+	export let message: string;
 </script>
 
 <main>
-	<h1>{status}</h1>
-	{#if status === 404}
-		<p>Sorry! Cannot find the page you are looking for.</p>
-	{/if}
+	<h1>{name}</h1>
+	<p>{message}</p>
 </main>

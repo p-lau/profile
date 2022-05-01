@@ -14,14 +14,14 @@ specifiers:
   prettier-plugin-svelte: ^2.7.0
   svelte: ^3.47.0
   svelte-check: ^2.6.6
-  svelte-particles: ^1.43.1
+  svelte-particles: ^2.0.6
   svelte-preprocess: ^4.10.5
   tslib: ^2.3.1
   typescript: ^4.6.3
 
 dependencies:
   normalize.css: 8.0.1
-  svelte-particles: 1.43.1_svelte@3.47.0
+  svelte-particles: 2.0.6_svelte@3.47.0
 
 devDependencies:
   '@playwright/test': 1.21.1
@@ -2546,13 +2546,13 @@ packages:
       svelte: 3.47.0
     dev: true
 
-  /svelte-particles/1.43.1_svelte@3.47.0:
-    resolution: {integrity: sha512-3mw9USn7i1CQoiK5M3OHyItdRRmLJhpHiXbbWq4fXE0ZhwCyYRSidpxr5KwJTPOYYOZlFZ0xw8WyvzF+eGti4Q==}
+  /svelte-particles/2.0.6_svelte@3.47.0:
+    resolution: {integrity: sha512-IYSvlSGvYUi6C0XUkNUJiUiqZmv1fgva5fRwk8jDX5sBbPRB2N7l8CZvf4ijAXa1/l0yfvwu0pbO89WX1aww8A==}
     peerDependencies:
       svelte: '>=3'
     dependencies:
       svelte: 3.47.0
-      tsparticles: 1.43.1
+      tsparticles-engine: 2.0.6
     dev: false
 
   /svelte-preprocess/4.10.5_svelte@3.47.0+typescript@4.6.3:
@@ -2635,8 +2635,8 @@ packages:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
     dev: true
 
-  /tsparticles/1.43.1:
-    resolution: {integrity: sha512-6EuHncwqzoyTlUxc11YH8LVlwVUgpYaZD0yMOeA2OvRqFZ9VQV8EjjQ6ZfXt6pfGA1ObPwU929jveFatxwTQkg==}
+  /tsparticles-engine/2.0.6:
+    resolution: {integrity: sha512-qsAMp68No1ncbFQbyjILrVtS9LeNTtBmxPa91COvHq4iLELReUjVxXTWfLWi0+xczTbdpNPRPx92r0V3xlqeHw==}
     requiresBuild: true
     dev: false
 
