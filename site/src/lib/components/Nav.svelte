@@ -1,36 +1,35 @@
 <script lang="ts">
-	import { navigating } from "$app/stores";
-	import { fade } from 'svelte/transition';
-	import Theme from './Theme.svelte';
+	import { page } from "$app/stores";
+	import { fade, fly } from 'svelte/transition';
 	const items = [
 		{
 			title: 'About',
-			href: 'about'
+			href: '/about'
 		},
 		{
 			title: 'Projects',
-			href: 'projects'
+			href: '/projects'
 		},
 		{
 			title: 'Blog',
-			href: 'blog'
+			href: '/blog'
 		}
 	];
 </script>
 
-<h1><a href="/">Panhavuth Lau</a></h1>
-<nav transition:fade={{ duration: 200 }}>
+<h1 in:fly={{ duration: 100, y: -20, opacity: 0, delay: 200 }} out:fly={{duration: 100, y: -20, opacity: 0}}><a href="/">Panhavuth Lau</a></h1>
+<nav in:fly={{ duration: 100, y: 20, opacity: 0, delay: 200 }} out:fly={{ duration: 100, y: 20, opacity: 0}}>
 	<ul>
-		{#each items as { href, title }}
-			<li>
-				<a href={href} title={title}>
+		{#each items as { href, title }, i (title)}
+			<li in:fade={{duration: 100, delay: i * 200}}>
+				<a href={href} title={title} class:active={href === $page.url.pathname}>
 					{title}
 				</a>
 			</li>
 		{/each}
-		<Theme />
 	</ul>
 </nav>
+
 
 <style>
 	nav {
@@ -51,6 +50,7 @@
 	li {
 		list-style: none;
 		display: flex;
+		flex-shrink: 1;
 	}
 
 	nav a {
@@ -61,5 +61,9 @@
 
 	ul a:hover {
 		color: dodgerblue;
+	}
+
+	.active {
+		border-bottom: 1px solid dodgerblue;
 	}
 </style>

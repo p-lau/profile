@@ -8,7 +8,7 @@
 	const { toggle } = themeStore;
 </script>
 
-<button on:click={toggle} title={$themeStore.toUpperCase()}>
+<button on:click={toggle} title={$themeStore.toUpperCase()} {...$$restProps}>
 	{#if $themeStore === 'system'}
 		<Screen />
 	{:else if $themeStore === 'light'}

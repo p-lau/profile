@@ -41,7 +41,7 @@ html[theme='dark'] {
 }
 
 html {
-    transition: background-color 200ms linear;
+    transition: background-color 100ms linear;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: var(--background-color);
@@ -55,7 +55,7 @@ body {
 
 a {
     color: var(--text-color);
-    transition: all 100ms ease-in-out !important;
+    transition: color 150ms ease-in-out !important;
     text-decoration: none;
 }
 
@@ -72,7 +72,6 @@ h4,
 h5,
 h6 {
     font-family: 'IBM Plex Sans';
-    transition: color 200ms linear;
 }
 
 h1 {
