@@ -29,6 +29,7 @@
     "react-dom": "^18.1.0",
     "sanity-plugin-dark-mode": "^0.0.33",
     "sanity-plugin-graph-view": "^1.0.7",
+    "sanity-plugin-markdown": "^2.1.1",
     "styled-components": "^5.3.5"
   }
 }

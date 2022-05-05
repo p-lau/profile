@@ -8,13 +8,13 @@
 	<title>Panhavuth Lau</title>
 </svelte:head>
 
-<div transition:fly={{ duration: 200, delay: 200, x: -50}}>
+<div transition:fly={{ duration: 100, delay: 200, x: -50}}>
 	<small>
 		Developer
 	</small>
 	<Title link='/about'/>
 </div>
-<nav transition:fly={{ duration: 200, delay: 200, x: 50}}>
+<nav transition:fly={{ duration: 100, delay: 200, x: 50}}>
 	<a href="/projects">Projects</a>
 	<a href="/blog">Blog</a>
 	<a href="/resume">Resume</a>

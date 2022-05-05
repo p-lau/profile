@@ -5,7 +5,7 @@
   },
   "api": {
     "projectId": "92s64fma",
-    "dataset":"production"
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
@@ -14,7 +14,8 @@
     "@sanity/desk-tool",
     "@sanity/vision",
     "dark-mode",
-    "graph-view"
+    "graph-view",
+    "markdown"
   ],
   "parts": [
     {

@@ -2,7 +2,7 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({fetch}) => {
-		const res = await fetch(`/api/getBlogPosts`);
+		const res = await fetch(`/api/blogs`);
         const posts = await res.json();
         console.log(posts);
 
@@ -28,10 +28,11 @@
         categories: string[];
         title: string;
         image: string;
+        summary: string;
     }
 </script>
 
-<h1>Blogs</h1>
+<h2>Blogs</h2>
 <div class="posts">
     {#each posts as post}
         <Post {...post} />
@@ -39,11 +40,13 @@
 </div>
 
 <style>
+    h2 {
+        text-align: center;
+    }
     .posts {
         padding: 1em;
         display: flex;
         flex-wrap: wrap;
-
         grid-gap: 1em;
     }
 </style>

@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit'
 export const get: RequestHandler = async () => {
-    const posts = await fetch(`https://92s64fma.api.sanity.io/v2022-05-01/data/query/production?query=*[_type=="post"]{title, "slug": slug.current, publishedAt, "image": mainImage.asset->url, "categories": categories[]->title}`)
-    
+    const query = `*[_type=="post"]{title,"slug":slug.current,publishedAt,"image":mainImage.asset->url,"categories":categories[]->title,summary}`
+    const posts = await fetch(`https://92s64fma.api.sanity.io/v2022-05-01/data/query/production?query=${query}`)
     try {
         const data = await posts.json()
         if(data?.result?.length){
@@ -22,5 +22,4 @@ export const get: RequestHandler = async () => {
             }
         }
     }
-
 }

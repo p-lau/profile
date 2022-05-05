@@ -3,10 +3,11 @@
     export let categories: string[];
     export let title: string;
     export let image: string;
+    export let summary: string;
 </script>
 
-<a href={`/${slug}`}>
-    <p>{title}</p>
+<a href={`/${slug}`} style:background={`url(#image${title})`}>
+    <h3>{title}</h3>
     {#if categories}
         <div class='categories'>
             {#each categories as category}
@@ -14,34 +15,40 @@
             {/each}
         </div>
     {/if}
+    <p>{summary || ''}</p>
 </a>
 
 <style>
     a {
         /* style:background-image={`url(${image})`} */
+        color: var(--text-color);
         place-self: center;
         display: flex;
         flex-direction: column;
+        flex: 1;
 
         padding: 1em;
 
-        aspect-ratio: 16 / 9;
-        height: minmax(10em, 10vh);
-        width: minmax(10em, 10wh);
+        aspect-ratio: 16/9;
 
         border: 1px solid;
         border-radius: 5px;
         box-sizing: border-box;
     }
 
+    a * {
+        text-overflow: ellipsis;
+    }
+
     a:hover {
         box-shadow: 0 0 5px dodgerblue;
+        border-color: dodgerblue;
     }
 
     small {
         padding: 2px;
         box-sizing: border-box;
-        background-color: rgb(95, 71, 40);
+        border: 1px solid;
         border-radius: 5px;
     }
 

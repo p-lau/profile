@@ -17,11 +17,11 @@
 	];
 </script>
 
-<h1 in:fly={{ duration: 100, y: -20, opacity: 0, delay: 200 }} out:fly={{duration: 100, y: -20, opacity: 0}}><a href="/">Panhavuth Lau</a></h1>
-<nav in:fly={{ duration: 100, y: 20, opacity: 0, delay: 200 }} out:fly={{ duration: 100, y: 20, opacity: 0}}>
+<h1 in:fly={{ duration: 100, y: -20, opacity: 0, delay: 100 }} out:fly={{duration: 100, y: -20, opacity: 0}}><a href="/">Panhavuth Lau</a></h1>
+<nav in:fly={{ duration: 100, y: 20, opacity: 0, delay: 100 }} out:fly={{ duration: 100, y: 20, opacity: 0}}>
 	<ul>
 		{#each items as { href, title }, i (title)}
-			<li in:fade={{duration: 100, delay: i * 200}}>
+			<li in:fade={{duration: 100, delay: i * 150}}>
 				<a href={href} title={title} class:active={href === $page.url.pathname}>
 					{title}
 				</a>
