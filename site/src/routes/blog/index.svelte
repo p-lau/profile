@@ -32,7 +32,7 @@
     }
 </script>
 
-<h2>Blogs</h2>
+<h1>Blogs</h1>
 <div class="posts">
     {#each posts as post}
         <Post {...post} />
@@ -40,7 +40,7 @@
 </div>
 
 <style>
-    h2 {
+    h1 {
         text-align: center;
     }
     .posts {

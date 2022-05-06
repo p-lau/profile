@@ -6,7 +6,7 @@
     export let summary: string;
 </script>
 
-<a href={`/${slug}`} style:background={`url(#image${title})`}>
+<a href={`/blog/${slug}`} style:background={`url(#image${title})`}>
     <h3>{title}</h3>
     {#if categories}
         <div class='categories'>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import { fade, fly } from 'svelte/transition';
+	import { fade, fly, crossfade } from 'svelte/transition';
 	const items = [
 		{
 			title: 'About',
@@ -34,6 +34,9 @@
 <style>
 	nav {
 		position: sticky;
+		top: 0;
+		background-color: var(--background-color);
+		border-bottom: 1px solid currentColor;
 	}
 
 	h1 {
@@ -41,10 +44,11 @@
 	}
 
 	ul {
-		margin: 0;
+		max-width: 50rem;
+		margin: auto;
 		padding: 0 1rem;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 	}
 
 	li {
@@ -64,6 +68,6 @@
 	}
 
 	.active {
-		border-bottom: 1px solid dodgerblue;
+		border-bottom: 2px solid dodgerblue;
 	}
 </style>

@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { VERSION } from 'svelte/compiler'
+	import { fade } from 'svelte/transition'
 </script>
 
-<footer>
-	<p>Panhavuth Lau</p>
+<footer in:fade={{duration: 100, delay: 200}} out:fade={{duration: 100}}>
 	<small>Using Svelte {VERSION}</small>
 </footer>
+
+<style>
+	footer {
+		text-align: center;
+	}
+</style>

@@ -46,11 +46,15 @@ html {
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    height: 100%;
+    width: 100%;
 }
 
 body {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 a {

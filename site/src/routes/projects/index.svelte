@@ -1,7 +1,7 @@
-<h2>Projects</h2>
+<h1>Projects</h1>
 
 <style>
-    h2 {
+    h1 {
         text-align: center;
     }
 </style>

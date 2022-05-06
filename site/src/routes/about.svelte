@@ -1,5 +1,10 @@
 <script>
-    import Nav from "$lib/components/Nav.svelte";
 </script>
 
-<h2>About</h2>
+<h1>About</h1>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+</style>
