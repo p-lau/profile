@@ -1,28 +1,32 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import { fade, fly, crossfade } from 'svelte/transition';
+	let path: string
 	const items = [
+		{
+			title: 'Blog',
+			href: '/blog'
+		},
 		{
 			title: 'About',
 			href: '/about'
 		},
 		{
 			title: 'Projects',
-			href: '/projects'
+			href: '/project'
 		},
-		{
-			title: 'Blog',
-			href: '/blog'
-		}
 	];
+	$: {
+		path = $page.url.pathname;
+	}
 </script>
 
-<h1 in:fly={{ duration: 100, y: -20, opacity: 0, delay: 100 }} out:fly={{duration: 100, y: -20, opacity: 0}}><a href="/">Panhavuth Lau</a></h1>
+<h1 in:fly={{ duration: 100, y: -20, opacity: 0, delay: 100 }} out:fly={{duration: 100, y: -20, opacity: 0}}><a href="/" title="Home">Panhavuth Lau</a></h1>
 <nav in:fly={{ duration: 100, y: 20, opacity: 0, delay: 100 }} out:fly={{ duration: 100, y: 20, opacity: 0}}>
 	<ul>
 		{#each items as { href, title }, i (title)}
 			<li in:fade={{duration: 100, delay: i * 150}}>
-				<a href={href} title={title} class:active={href === $page.url.pathname}>
+				<a href={href} title={title} class:active={path.includes(href)}>
 					{title}
 				</a>
 			</li>
@@ -36,22 +40,26 @@
 		position: sticky;
 		top: 0;
 		background-color: var(--background-color);
-		border-bottom: 1px solid currentColor;
+		border-bottom: 1px solid var(--border-color);
 	}
 
 	h1 {
 		text-align: center;
+		font-weight: lighter;
 	}
 
 	ul {
-		max-width: 50rem;
+		max-width: 40rem;
 		margin: auto;
 		padding: 0 1rem;
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		place-content: center;
+		box-sizing: border-box;
 	}
 
 	li {
+		place-content: center;
 		list-style: none;
 		display: flex;
 		flex-shrink: 1;

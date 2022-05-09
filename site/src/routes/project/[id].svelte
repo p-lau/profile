@@ -36,15 +36,15 @@
 </svelte:head>
 
 {#key slug}
-    <section>
+    <div>
         <h1>{title}</h1>
         <small>{author.name}</small>
         {@html marked.parse(body)}
-    </section>
+    </div>
 {/key}
 
 <style>
-    section {
+    div {
 		box-sizing: border-box;
         border: 1px solid var(--border-color);
         border-width: 0 1px;

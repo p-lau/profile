@@ -10,5 +10,8 @@
 <style>
 	footer {
 		text-align: center;
+		box-sizing: border-box;
+		padding: 1rem;
+		border-top: 1px solid var(--border-color);
 	}
 </style>

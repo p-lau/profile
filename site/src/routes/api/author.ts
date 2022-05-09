@@ -1,13 +1,7 @@
 import { sanityClient } from '$lib/sanity'
 import type { RequestHandler } from '@sveltejs/kit'
 export const get: RequestHandler = async () => {
-    const query = `*[_type == "post" && "Blog" in categories[]->title]{
-        "categories": categories[]->title,
-        "slug": slug.current,
-        "image": mainImage.asset->url,
-        title,
-        summary,
-    }`
+    const query = `*[_type == "author"][0]{bio, "avatar": image.asset -> url, name}`
     return sanityClient.fetch(query)
     .then(data => {
         if (data) {

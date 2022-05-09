@@ -1,4 +1,3 @@
-/// <reference lib="WebWorker" />
 declare const self: ServiceWorkerGlobalScope;
 import { build, files, prerendered, version } from '$service-worker';
 

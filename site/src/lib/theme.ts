@@ -12,21 +12,22 @@ const { subscribe, update, set } = writable('system', () => {
 const { toggle, reset } = {
     toggle: () => {
         update((t) => {
-            return themes[(themes.indexOf(t) + 1) % themes.length]
+            const theme = themes[(themes.indexOf(t) + 1) % themes.length]
+            updateBrowser(theme);
+            return theme
         })
     },
     reset: () => {
-        set('system')
+        const theme = 'system';
+        updateBrowser(theme);
+        set(theme)
     }
 }
 
-export const themeAction = (node: HTMLElement, theme: string): SvelteActionReturnType => {
-    
-    return {
-        update: (t) => {
-            localStorage.setItem('theme', t);
-            document.documentElement.setAttribute("theme", localStorage.theme);
-        }
+const updateBrowser = (theme: string) => {
+    if(browser){
+        localStorage.setItem('theme', theme);
+        document.documentElement.setAttribute("theme", localStorage.theme);
     }
 }
 

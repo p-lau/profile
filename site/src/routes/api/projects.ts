@@ -1,7 +1,7 @@
 import { sanityClient } from '$lib/sanity'
 import type { RequestHandler } from '@sveltejs/kit'
 export const get: RequestHandler = async () => {
-    const query = `*[_type == "post" && "Blog" in categories[]->title]{
+    const query = `*[_type == "post" && "Project" in categories[]->title]{
         "categories": categories[]->title,
         "slug": slug.current,
         "image": mainImage.asset->url,

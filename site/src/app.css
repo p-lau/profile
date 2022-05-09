@@ -6,8 +6,8 @@
     --blue: #0e387a;
     --blue-fade: #0e387a77;
     --gray: #9fafca;
-    --black: #06021a;
-    --white: #f5eeee;
+    --black: #012;
+    --white: #fee;
     --text-color: var(--black);
     --background-color: var(--white);
     --main-color: var(--white);
@@ -20,6 +20,7 @@
     :root {
         --text-color: var(--white);
         --background-color: var(--black);
+        --border-color: #123;
     }
 }
 
@@ -27,17 +28,20 @@
     :root {
         --text-color: var(--black);
         --background-color: var(--white);
+        --border-color: #edd;
     }
 }
 
 html[theme='light'] {
     --text-color: var(--black);
     --background-color: var(--white);
+    --border-color: #edd;
 }
 
 html[theme='dark'] {
     --text-color: var(--white);
     --background-color: var(--black);
+    --border-color: #123;
 }
 
 html {
@@ -67,7 +71,6 @@ a:hover {
     color: dodgerblue;
 }
 
-p,
 small,
 h1,
 h2,
@@ -75,6 +78,11 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif
+}
+
+p {
     font-family: 'IBM Plex Sans';
 }
 

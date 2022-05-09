@@ -1,12 +1,15 @@
 <script lang="ts">
+    import { fade } from "svelte/transition";
     export let slug: string;
     export let categories: string[];
     export let title: string;
     export let image: string;
     export let summary: string;
+    export let type: string;
+    export let delay: number = 100;
 </script>
 
-<a href={`/blog/${slug}`} style:background={`url(#image${title})`}>
+<a in:fade={{duration: 100, delay}} href={`/${type}/${slug}`} style:background-image={`url(${image})`}>
     <h3>{title}</h3>
     {#if categories}
         <div class='categories'>
@@ -20,12 +23,11 @@
 
 <style>
     a {
-        /* style:background-image={`url(${image})`} */
+        background-position: center;
+        background-size: cover;
         color: var(--text-color);
-        place-self: center;
         display: flex;
         flex-direction: column;
-        flex: 1;
 
         padding: 1em;
 
@@ -36,8 +38,9 @@
         box-sizing: border-box;
     }
 
-    a * {
+    h3 {
         text-overflow: ellipsis;
+        word-wrap: break-word;
     }
 
     a:hover {

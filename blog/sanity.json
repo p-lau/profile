@@ -15,7 +15,8 @@
     "@sanity/vision",
     "dark-mode",
     "graph-view",
-    "markdown"
+    "markdown",
+    "media"
   ],
   "parts": [
     {

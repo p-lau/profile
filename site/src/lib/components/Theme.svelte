@@ -3,7 +3,7 @@
 	import Moon from '$lib/icons/Moon.svelte';
 	import Sun from '$lib/icons/Sun.svelte';
 	import Screen from '$lib/icons/Screen.svelte';
-	import { themeAction, themeStore } from '$lib/utils/theme';
+	import { themeStore } from '$lib/theme';
 	import Load from '$lib/icons/Load.svelte';
 	const { toggle } = themeStore;
 </script>

@@ -2,56 +2,56 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({fetch}) => {
-		const res = await fetch(`/api/author`);
-        const data = await res.json();
+		const res = await fetch(`/api/projects`);
+        const posts = await res.json();
         return {
             cache:{
                 maxage: 300
             },
             status: 200,
             props: {
-                ...data
+                posts
             }
         }
 	};
 </script>
 
 <script lang="ts">
-    import { marked } from "marked";
+    import Post from "$lib/components/Post.svelte";
     import { fade } from "svelte/transition";
-    export let name: string;
-    export let bio: string;
-    export let avatar: string;
+    export let posts: Post[];
+
+    interface Post {
+        slug: string;
+        categories: string[];
+        title: string;
+        image: string;
+        summary: string;
+    }
 </script>
 
 <svelte:head>
-	<title>About Me - Panhavuth Lau</title>
+    <title>Projects</title>
 </svelte:head>
 
 <section in:fade={{duration: 100}}>
-    <figure>
-        <img src={avatar}/ alt="Me">
-    </figure>
-    <h1>{name}</h1>
-    {@html marked(bio)}
+    <h1>Projects</h1>
+    <div in:fade={{duration: 100, delay: 100}} class="posts">
+        {#each posts as post, i}
+            <Post {...post} type="project" delay={i * 200}/>
+        {/each}
+    </div>
 </section>
 
 <style>
-    figure {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        place-content: center;
-        margin: 0;
-    }
-    figure > img {
-        object-fit: cover;
-        border-radius: 5px;
-        aspect-ratio: 16/9;
-        box-shadow: 0 2px 4px black;
-    }
     h1 {
         text-align: center;
+    }
+    .posts {
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 1em;
     }
     section{
 		box-sizing: border-box;
@@ -62,6 +62,5 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-        max-width: 40rem;
     }
 </style>

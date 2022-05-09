@@ -1,13 +1,10 @@
 <script>
 	import 'normalize.css/normalize.css';
 	import '../app.css';
-	import { themeAction, themeStore } from '$lib/utils/theme';
 	import { fade } from 'svelte/transition';
 </script>
 
-<svelte:window use:themeAction={$themeStore} />
-
-<main in:fade={{ duration: 100, delay: 100 }} out:fade={{ duration: 100 }}>
+<main in:fade={{ duration: 100, delay: 200 }} out:fade={{ duration: 100 }}>
 	<slot />
 </main>
 
