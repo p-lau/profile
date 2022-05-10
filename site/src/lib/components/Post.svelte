@@ -6,10 +6,9 @@
     export let image: string;
     export let summary: string;
     export let type: string;
-    export let delay: number = 100;
 </script>
 
-<a in:fade={{duration: 100, delay}} href={`/${type}/${slug}`} style:background-image={`url(${image})`}>
+<a href={`/${type}/${slug}`} style:background-image={`url(${image})`}>
     <h3>{title}</h3>
     {#if categories}
         <div class='categories'>

@@ -28,7 +28,7 @@
 	<title>About Me - Panhavuth Lau</title>
 </svelte:head>
 
-<section in:fade={{duration: 100}}>
+<section in:fade|local={{duration: 200}}>
     <figure>
         <img src={avatar}/ alt="Me">
     </figure>

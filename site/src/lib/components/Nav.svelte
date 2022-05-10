@@ -21,11 +21,11 @@
 	}
 </script>
 
-<h1 in:fly={{ duration: 100, y: -20, opacity: 0, delay: 100 }} out:fly={{duration: 100, y: -20, opacity: 0}}><a href="/" title="Home">Panhavuth Lau</a></h1>
-<nav in:fly={{ duration: 100, y: 20, opacity: 0, delay: 100 }} out:fly={{ duration: 100, y: 20, opacity: 0}}>
+<h1 transition:fly|local={{ duration: 100, y: -20, opacity: 0 }}><a href="/" title="Home">Panhavuth Lau</a></h1>
+<nav transition:fly|local={{ duration: 100, y: 20, opacity: 0}}>
 	<ul>
 		{#each items as { href, title }, i (title)}
-			<li in:fade={{duration: 100, delay: i * 150}}>
+			<li in:fade={{duration: 100, delay: i * 100}}>
 				<a href={href} title={title} class:active={path.includes(href)}>
 					{title}
 				</a>

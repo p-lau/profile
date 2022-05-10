@@ -18,7 +18,7 @@
 
 <script lang="ts">
     import Post from "$lib/components/Post.svelte";
-    import { fade } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
     export let posts: Post[];
 
     interface Post {
@@ -34,11 +34,11 @@
     <title>Blogs</title>
 </svelte:head>
 
-<section in:fade={{duration: 100}}>
+<section in:fly|local={{duration: 200, x: -200, opacity: 0}}>
     <h1>Blogs</h1>
-    <div in:fade={{duration: 100, delay: 100}} class="posts">
-        {#each posts as post, i}
-            <Post {...post} type="blog" delay={i * 200}/>
+    <div class="posts">
+        {#each posts as post (post.slug)}
+            <Post {...post} type="blog"/>
         {/each}
     </div>
 </section>

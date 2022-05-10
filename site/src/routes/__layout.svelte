@@ -7,7 +7,7 @@
 </script>
 
 <Nav/>
-<main in:fly={{ duration: 100, delay: 300, y: -20 }} out:fly={{ duration: 100, y: -20 }}>
+<main in:fly={{ duration: 100, delay: 300, y: -20 }}>
 	<slot />
 </main>
 <Footer/>
