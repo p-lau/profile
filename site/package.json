@@ -36,6 +36,7 @@
 		"@sanity/client": "^3.3.0",
 		"marked": "^4.0.15",
 		"normalize.css": "^8.0.1",
-		"svelte-particles": "^2.0.6"
+		"svelte-particles": "^2.0.6",
+		"svelte-themes": "^0.0.98"
 	}
 }
