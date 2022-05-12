@@ -1,17 +1,18 @@
 <script lang="ts">
 	import 'normalize.css/normalize.css';
 	import '../app.css';
-	import { fly } from 'svelte/transition';
-    import Nav from "$lib/components/Nav.svelte";
+	import { fade } from 'svelte/transition';
+	import Theme from 'svelte-themes/SvelteTheme.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<Nav/>
-<main in:fly={{ duration: 100, delay: 300, y: -20 }}>
+<Theme attribute='theme'/>
+<Nav />
+<main in:fade={{ duration: 100, delay: 300 }}>
 	<slot />
 </main>
-<Footer/>
-
+<Footer />
 
 <style>
 	main {

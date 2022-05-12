@@ -21,8 +21,8 @@
 	}
 </script>
 
-<h1 transition:fly|local={{ duration: 100, y: -20, opacity: 0 }}><a href="/" title="Home">Panhavuth Lau</a></h1>
-<nav transition:fly|local={{ duration: 100, y: 20, opacity: 0}}>
+<h1 in:fly|local={{ duration: 100, y: -20, opacity: 0 }}><a href="/" title="Home">Panhavuth Lau</a></h1>
+<nav in:fly|local={{ duration: 100, y: 20, opacity: 0}}>
 	<ul>
 		{#each items as { href, title }, i (title)}
 			<li in:fade={{duration: 100, delay: i * 100}}>
@@ -37,6 +37,7 @@
 
 <style>
 	nav {
+		transition: all 100ms linear;
 		position: sticky;
 		top: 0;
 		background-color: var(--background-color);

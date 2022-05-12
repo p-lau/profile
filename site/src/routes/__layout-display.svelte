@@ -2,8 +2,9 @@
 	import 'normalize.css/normalize.css';
 	import '../app.css';
 	import { fade } from 'svelte/transition';
+	import Theme from 'svelte-themes/SvelteTheme.svelte';
 </script>
-
+<Theme attribute='theme'/>
 <main in:fade={{ duration: 100, delay: 200 }} out:fade={{ duration: 100 }}>
 	<slot />
 </main>

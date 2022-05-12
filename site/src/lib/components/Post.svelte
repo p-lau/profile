@@ -8,7 +8,7 @@
     export let type: string;
 </script>
 
-<a href={`/${type}/${slug}`} style:background-image={`url(${image})`}>
+<a href={`/${type}/${slug}`} style:background-image={`url(${image}?blur=50)`}>
     <h3>{title}</h3>
     {#if categories}
         <div class='categories'>

@@ -3,17 +3,25 @@
 	import Moon from '$lib/icons/Moon.svelte';
 	import Sun from '$lib/icons/Sun.svelte';
 	import Screen from '$lib/icons/Screen.svelte';
-	import { themeStore } from '$lib/theme';
+	import themeStore, { setTheme } from 'svelte-themes'
 	import Load from '$lib/icons/Load.svelte';
-	const { toggle } = themeStore;
+
+	const toggle = () => {
+		switch ($themeStore.theme) {
+			case 'light': setTheme('dark'); break;
+			case 'dark': setTheme('system'); break;
+			case 'system': setTheme('light'); break;
+			default: setTheme('system');
+		}
+	}
 </script>
 
-<button on:click={toggle} title={$themeStore.toUpperCase()} {...$$restProps}>
-	{#if $themeStore === 'system'}
+<button on:click={toggle} title={$themeStore.theme?.toUpperCase()}>
+	{#if $themeStore.theme === 'system'}
 		<Screen />
-	{:else if $themeStore === 'light'}
+	{:else if $themeStore.theme === 'light'}
 		<Sun />
-	{:else if $themeStore === 'dark'}
+	{:else if $themeStore.theme === 'dark'}
 		<Moon />
 	{:else}
 		<Load />
@@ -22,13 +30,8 @@
 
 <style>
 	button {
-		padding: 0.5rem;
-		background: transparent;
-		color: var(--text-color);
-		filter: drop-shadow(0 0 2px transparent);
-		border: none;
+		display: contents;
 		cursor: pointer;
-		border-radius: 999px;
 	}
     button :global(svg){
         transition: all 100ms ease-in-out;
