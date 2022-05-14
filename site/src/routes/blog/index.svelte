@@ -18,7 +18,7 @@
 
 <script lang="ts">
     import Post from "$lib/components/Post.svelte";
-    import { fade, fly } from "svelte/transition";
+    import { fade } from "svelte/transition";
     export let posts: Post[];
 
     interface Post {
@@ -34,7 +34,7 @@
     <title>Blogs</title>
 </svelte:head>
 
-<section in:fly|local={{duration: 200, x: -200, opacity: 0}}>
+<section in:fade={{duration: 200}}>
     <h1>Blogs</h1>
     <div class="posts">
         {#each posts as post (post.slug)}
@@ -54,8 +54,10 @@
         grid-gap: 1em;
     }
     section{
+        max-width: 40rem;
 		box-sizing: border-box;
         border: 1px solid var(--border-color);
+        transition: border 100ms linear;
         border-width: 0 1px;
         padding: 1em;
         height: 100%;

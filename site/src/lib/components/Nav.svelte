@@ -26,7 +26,7 @@
 	<ul>
 		{#each items as { href, title }, i (title)}
 			<li in:fade={{duration: 100, delay: i * 100}}>
-				<a href={href} title={title} class:active={path.includes(href)}>
+				<a sveltekit:prefetch href={href} title={title} class:active={path.includes(href)}>
 					{title}
 				</a>
 			</li>
@@ -63,7 +63,7 @@
 		place-content: center;
 		list-style: none;
 		display: flex;
-		flex-shrink: 1;
+		flex-grow: 1;
 	}
 
 	nav a {

@@ -8,43 +8,37 @@
     export let type: string;
 </script>
 
-<a href={`/${type}/${slug}`}>
-    <h3>{title}</h3>
-    {#if categories}
-        <div class='categories'>
-            {#each categories as category}
-                <small>{category}</small>
-            {/each}
-        </div>
-    {/if}
-    <p>{summary || ''}</p>
+<a sveltekit:prefetch href={`/${type}/${slug}`}>
     {#if image}
         <figure>
             <img src={image} alt={title}/>
         </figure>
     {/if}
+    <article>
+        <h2>{title}</h2>
+        {#if categories}
+            <div class='categories'>
+                {#each categories as category}
+                    <small>{category}</small>
+                {/each}
+            </div>
+        {/if}
+        <p>{summary || ''}</p>
+    </article>
 </a>
 
 <style>
     a {
-        background-position: center;
-        background-size: cover;
-        color: var(--text-color);
-        display: flex;
-        flex-direction: column;
-
-        padding: 1em;
-
+        position: relative;
+        padding: 1rem;
+        width: 100%;
         aspect-ratio: 16/9;
-
+        display: flex;
+        color: var(--text-color);
         border: 1px solid;
         border-radius: 5px;
         box-sizing: border-box;
-    }
-
-    h3 {
-        text-overflow: ellipsis;
-        word-wrap: break-word;
+        box-shadow: 0 2px 4px #1234;
     }
 
     a:hover {
@@ -57,6 +51,24 @@
         box-sizing: border-box;
         border: 1px solid;
         border-radius: 5px;
+    }
+
+    figure {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        z-index: -1;
+    }
+
+    figure img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        object-fit: cover;
     }
 
     .categories {

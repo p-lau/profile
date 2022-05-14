@@ -18,6 +18,7 @@
 		box-sizing: border-box;
 		padding: 1rem;
 		border-top: 1px solid var(--border-color);
+		transition: border 100ms linear;
 	}
 
 	small {

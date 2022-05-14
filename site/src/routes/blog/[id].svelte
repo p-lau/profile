@@ -38,6 +38,7 @@
 {#key slug}
     <section>
         <h1>{title}</h1>
+        <p>A {body.split(" ").length / 200} minute read.</p>
         <small>{author.name}</small>
         {@html marked.parse(body)}
     </section>

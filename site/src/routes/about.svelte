@@ -48,7 +48,7 @@
         object-fit: cover;
         border-radius: 5px;
         aspect-ratio: 16/9;
-        box-shadow: 0 2px 4px black;
+        box-shadow: 0 2px 4px #1234;
     }
     h1 {
         text-align: center;
