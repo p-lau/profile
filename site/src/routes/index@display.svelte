@@ -20,14 +20,14 @@
 	<title>Panhavuth Lau</title>
 </svelte:head>
 
-<div transition:fly={{ duration: 100, delay: 200, x: -50}}>
+<div in:fly={{ duration: 200, x: -50}}>
 	<div class="roles">
 			{roles[i]}
 			Developer
 	</div>
 	<Title link='/about'/>
 </div>
-<nav transition:fly={{ duration: 100, delay: 200, x: 50}}>
+<nav in:fly={{ duration: 200, x: 50}}>
 	<a href="/project">Projects</a>
 	<a href="/blog">Blog</a>
 	<a href="/resume">Resume</a>

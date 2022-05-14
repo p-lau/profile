@@ -30,7 +30,7 @@
 
 <section in:fade|local={{duration: 200}}>
     <figure>
-        <img src={avatar}/ alt="Me">
+        <img src={`${avatar}?h=600`} alt="Me">
     </figure>
     <h1>{name}</h1>
     {@html marked(bio)}
