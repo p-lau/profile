@@ -1,8 +1,9 @@
 <script>
 	import Theme from '$lib/components/Theme.svelte';
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import Title from '$lib/components/Title.svelte';
 	import { onMount } from 'svelte';
+	import Canvas from '$lib/components/Canvas.svelte';
 
 	const roles = [
 		'Frontend', 'Fullstack', 'Go', 'Java', 'Svelte', 'React'
@@ -22,8 +23,8 @@
 
 <div in:fly={{ duration: 200, x: -50}}>
 	<div class="roles">
-			{roles[i]}
-			Developer
+		<span>{roles[i]}</span>
+		<span>Developer</span>
 	</div>
 	<Title link='/about'/>
 </div>
@@ -33,13 +34,18 @@
 	<a href="/resume">Resume</a>
 </nav>
 <Theme/>
+<Canvas/>
 
 <style>
 	div {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-items: center;
+	}
+
+	span {
+		z-index: -1;
 	}
 
 	nav > a {
@@ -59,6 +65,9 @@
 
 	.roles {
 		display: flex;
-		flex-direction: row;
+		flex-flow: row;
+		gap: 0.5rem;
+		justify-content: center;
 	}
+
 </style>

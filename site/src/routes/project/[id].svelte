@@ -17,6 +17,7 @@
 </script>
 
 <script lang="ts">
+    import Theme from '$lib/components/Theme.svelte';
     import { marked } from 'marked'
     export let categories: string[];
     export let title: string;
@@ -45,7 +46,6 @@
 
 <style>
     section {
-		box-sizing: border-box;
         border: 1px solid var(--border-color);
         border-width: 0 1px;
         padding: 1em;

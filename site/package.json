@@ -15,6 +15,8 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.21.1",
+		"@portabletext/svelte": "^1.0.1",
+		"@portabletext/toolkit": "^1.0.5",
 		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
 		"@types/marked": "^4.0.3",
@@ -35,8 +37,9 @@
 	"dependencies": {
 		"@sanity/client": "^3.3.0",
 		"marked": "^4.0.15",
-		"normalize.css": "^8.0.1",
 		"svelte-particles": "^2.0.6",
-		"svelte-themes": "^0.0.98"
+		"svelte-themes": "^0.0.98",
+		"the-new-css-reset": "^1.6.0",
+		"tsparticles": "^2.0.6"
 	}
 }

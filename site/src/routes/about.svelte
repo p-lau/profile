@@ -54,7 +54,6 @@
         text-align: center;
     }
     section{
-		box-sizing: border-box;
         border: 1px solid var(--border-color);
         border-width: 0 1px;
         padding: 1em;

@@ -4,9 +4,7 @@
 </svelte:head>
 
 <section>
-    <object title="resume" data="/resume.pdf" type="application/pdf">
-        <div>No online PDF viewer installed</div>
-    </object>
+    <object title="resume" data="/resume.pdf" type="application/pdf" />
 </section>
 
 <style>
@@ -15,7 +13,6 @@
         width: 100%;
     }
     section{
-		box-sizing: border-box;
         border: 1px solid var(--border-color);
         border-width: 0 1px;
         padding: 1em;

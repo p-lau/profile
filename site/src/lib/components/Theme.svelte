@@ -5,6 +5,7 @@
 	import Screen from '$lib/icons/Screen.svelte';
 	import themeStore, { setTheme } from 'svelte-themes'
 	import Load from '$lib/icons/Load.svelte';
+	import { capitalize } from '$lib/util';
 
 	const toggle = () => {
 		switch ($themeStore.theme) {
@@ -16,7 +17,7 @@
 	}
 </script>
 
-<button on:click={toggle} title={$themeStore.theme?.toUpperCase()}>
+<button on:click={toggle} title={capitalize(`${$themeStore.theme} theme`)}>
 	{#if $themeStore.theme === 'system'}
 		<Screen />
 	{:else if $themeStore.theme === 'light'}

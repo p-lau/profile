@@ -4,7 +4,7 @@
 	import Theme from './Theme.svelte'
 </script>
 
-<footer in:fade|local={{duration: 100}}>
+<footer in:fade={{duration: 100}}>
 	<small>Using Svelte {VERSION}</small>
 	<Theme/>
 </footer>
@@ -15,7 +15,6 @@
 		place-content: center;
 		gap: 1rem;
 		text-align: center;
-		box-sizing: border-box;
 		padding: 1rem;
 		border-top: 1px solid var(--border-color);
 		transition: border 100ms linear;

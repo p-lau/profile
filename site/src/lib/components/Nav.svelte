@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import { fade, fly, crossfade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	let path: string
 	const items = [
 		{
@@ -21,8 +21,8 @@
 	}
 </script>
 
-<h1 in:fly|local={{ duration: 100, y: -20, opacity: 0 }}><a href="/" title="Home">Panhavuth Lau</a></h1>
-<nav in:fly|local={{ duration: 100, y: 20, opacity: 0}}>
+<h1 in:fly={{ duration: 100, y: -20, opacity: 0 }}><a href="/" title="Home">Panhavuth Lau</a></h1>
+<nav in:fly={{ duration: 100, y: 20, opacity: 0}}>
 	<ul>
 		{#each items as { href, title }, i (title)}
 			<li in:fade={{duration: 100, delay: i * 100}}>
@@ -56,7 +56,6 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		place-content: center;
-		box-sizing: border-box;
 	}
 
 	li {

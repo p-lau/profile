@@ -1,5 +1,5 @@
 <script>
-	import 'normalize.css/normalize.css';
+	import "the-new-css-reset/css/reset.css"
 	import '../app.css';
 	import Theme from 'svelte-themes/SvelteTheme.svelte';
 </script>

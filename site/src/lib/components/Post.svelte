@@ -38,7 +38,6 @@
 		color: var(--text-color);
 		border: 1px solid;
 		border-radius: 5px;
-		box-sizing: border-box;
 		box-shadow: 0 2px 4px #1234;
 	}
 
@@ -63,7 +62,6 @@
 
 	small {
 		padding: 2px;
-		box-sizing: border-box;
 		border: 1px solid;
 		border-radius: 5px;
 	}

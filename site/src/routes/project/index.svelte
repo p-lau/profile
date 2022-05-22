@@ -55,7 +55,6 @@
     }
     section{
         max-width: 40rem;
-		box-sizing: border-box;
         border: 1px solid var(--border-color);
         transition: border 100ms linear;
         border-width: 0 1px;

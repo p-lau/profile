@@ -8,10 +8,6 @@ const config = {
 	preprocess: preprocess(),
 	kit: {
 		adapter: adapter(),
-		prerender: {
-			concurrency: 3,
-			default: true
-		}
 	}
 };
 

@@ -17,17 +17,18 @@
 </script>
 
 <script lang="ts">
+    import { PortableText } from '@portabletext/svelte'
     import { marked } from 'marked'
-    export let categories: string[];
     export let title: string;
-    export let publishedAt: string;
     export let author: {
         name: string;
         slug: string;
     };
     export let summary: string;
-    export let body: string;
+    export let body: unknown;
     export let slug: string;
+
+    console.log(body)
 </script>
 
 <svelte:head>
@@ -38,15 +39,13 @@
 {#key slug}
     <section>
         <h1>{title}</h1>
-        <p>A {body.split(" ").length / 200} minute read.</p>
         <small>{author.name}</small>
-        {@html marked.parse(body)}
+        <PortableText value={body}/>
     </section>
 {/key}
 
 <style>
     section {
-		box-sizing: border-box;
         border: 1px solid var(--border-color);
         border-width: 0 1px;
         padding: 1em;
