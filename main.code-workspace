@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "Profile",
+			"path": ".",
+		},
+		{
+			"name": "Site",
+			"path": "site"
+		},
+		{
+			"name": "Blog",
+			"path": "blog"
+		}
+	],
+	"settings": {}
+}

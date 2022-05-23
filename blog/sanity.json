@@ -11,15 +11,13 @@
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/vision",
+    "dark-mode",
+    "graph-view",
+    "markdown",
+    "media"
   ],
-  "env": {
-    "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
-    }
-  },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
