@@ -1,0 +1,13 @@
+{
+    "name": "p-lau",
+    "version": "0.0.1",
+    "description": "Monorepo for my profile",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/p-lau/profile"
+    },
+    "author": "Panhavuth Lau",
+    "license": "MIT",
+    "homepage": "https://github.com/p-lau/profile#readme"
+}

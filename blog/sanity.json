@@ -7,19 +7,22 @@
     "projectId": "92s64fma",
     "dataset": "production"
   },
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      }
+    }
+  },
   "plugins": [
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/vision",
+    "graph-view",
+    "media"
   ],
-  "env": {
-    "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
-    }
-  },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
