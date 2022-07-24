@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import type { HandleError } from '@sveltejs/kit'
+	import type { HandleError } from '@sveltejs/kit';
 	export const load: HandleError = ({ error: { name, message } }) => {
 		return {
 			props: {

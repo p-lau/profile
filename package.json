@@ -1,7 +1,7 @@
 {
     "name": "p-lau",
     "version": "0.0.1",
-    "description": "Monorepo for p-lau profile",
+    "description": "Monorepo for my profile",
     "private": true,
     "repository": {
         "type": "git",

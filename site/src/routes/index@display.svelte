@@ -1,9 +1,7 @@
 <script>
-	import Theme from '$lib/components/Theme.svelte';
 	import { fly } from 'svelte/transition';
 	import Title from '$lib/components/Title.svelte';
 	import { onMount } from 'svelte';
-	import Canvas from '$lib/components/Canvas.svelte';
 
 	const roles = [
 		'Frontend', 'Fullstack', 'Go', 'Java', 'Svelte', 'React'
@@ -29,12 +27,10 @@
 	<Title link='/about'/>
 </div>
 <nav in:fly={{ duration: 200, x: 50}}>
-	<a href="/project">Projects</a>
+	<a href="/project" ping="/">Projects</a>
 	<a href="/blog">Blog</a>
 	<a href="/resume">Resume</a>
 </nav>
-<Theme/>
-<Canvas/>
 
 <style>
 	div {

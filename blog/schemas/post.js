@@ -32,10 +32,10 @@ export default {
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
+      name: 'topics',
+      title: 'Topics',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [{type: 'reference', to: {type: 'topic'}}],
     },
     {
       name: 'publishedAt',

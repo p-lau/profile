@@ -17,11 +17,10 @@
 </script>
 
 <script lang="ts">
-    import { marked } from "marked";
     import { fade } from "svelte/transition";
     export let name: string;
     export let bio: string;
-    export let avatar: string;
+    export let avatar: any;
 </script>
 
 <svelte:head>
@@ -29,11 +28,6 @@
 </svelte:head>
 
 <section in:fade|local={{duration: 200}}>
-    <figure>
-        <img src={`${avatar}?h=600`} alt="Me">
-    </figure>
-    <h1>{name}</h1>
-    {@html marked(bio)}
 </section>
 
 <style>
